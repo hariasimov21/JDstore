@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
+
+
 module.exports = {
 
     mode: 'development',
@@ -42,8 +44,28 @@ module.exports = {
                     options: {
                         esModule: false
                     }
+
                 }]
-            }
+            },
+
+            /*  {
+                 test: /\.css$/i,
+                 loader: "css-loader",
+                 options: {
+                     url: (url, resourcePath) => {
+                         // resourcePath - path to css file
+
+                         // Don't handle `img.png` urls
+                         if (url.includes("img.png")) {
+                             return false;
+                         }
+
+                         return true;
+                     }
+                 }
+
+             }, */
+
         ]
 
 
@@ -61,8 +83,18 @@ module.exports = {
             patterns: [
                 { from: 'src/assets', to: 'assets/' },
             ]
-        })
-    ]
+        }),
+
+    ],
+
+    /*   resolve: {
+          alias: {
+              '../assets/1.jpeg': path.resolve(
+                  __dirname,
+                  '../assets/1.jpeg/img.png'
+              )
+          }
+      } */
 
 }
 

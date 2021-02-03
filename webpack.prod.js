@@ -57,6 +57,21 @@ module.exports = {
                         esModule: false
                     }
                 }]
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
+                loader: 'url-loader',
+                use: [{
+                        options: {
+                            limit: 8192,
+                            encoding: 'utf8'
+
+
+                        }
+
+                    }
+
+                ]
             }
         ]
 
