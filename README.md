@@ -1,6 +1,6 @@
-# Plantilla incial 
+# JSTORE
 
-para realizar proyectos en Webpack.
+Proyecto de e-commerce con desarrollo **MERN**.
 
 ### Notas:
 Recordar reconstruir los módulos de Node
@@ -12,7 +12,4 @@ y para construir el build :
 ````
 npm run build
 ````
-
-Siguamos adeñante!
-
-https://www.runtastic.com/blog/es/como-empezar-a-entrenar/
+configurado los dos archivos de webpack con url-loader
