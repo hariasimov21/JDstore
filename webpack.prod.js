@@ -59,13 +59,12 @@ module.exports = {
                 }]
             },
             {
-                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
-                loader: 'url-loader',
-                use: [{
+                test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+                
+                use: [
+                    {loader: 'url-loader',
                         options: {
-                            limit: 8192,
-                            encoding: 'utf8'
-
+                            limit: 8192,                   
 
                         }
 
